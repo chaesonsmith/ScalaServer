@@ -4,6 +4,8 @@ import java.io._
 object Server extends App {
     val server = new ServerSocket(8080)
 
+    System.out.println("Starting server...")
+    
     while (true) {
         var socket = server.accept()
         var input = new BufferedReader(new InputStreamReader(socket.getInputStream()))
